@@ -4,46 +4,87 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Object Oriented Programming Exam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <div>
+    <div class="container m-3 px-4 d-flex justify-content-center">
         <form runat="server">
-            <!-- Input Person Details -->
-            <div>
-                <h2>Input Person Details</h2>
-                <p>Name: <asp:TextBox ID="TbPersonName" runat="server"></asp:TextBox></p>
-                <p>Age: <asp:TextBox ID="TbPersonAge" runat="server"></asp:TextBox></p>
-                <p>Gender: <asp:TextBox ID="TbPersonGender" runat="server"></asp:TextBox></p>
-                <asp:Button ID="BtnPerson" runat="server" Text="Get Person Details" OnClick="BtnPerson_Click"/>
-            </div>
+            <div class="row mb-3">
+                <!-- Input Person Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">INPUT PERSON DETAILS</h3>
+                        <p>Name: <asp:TextBox ID="TbPersonName" runat="server"></asp:TextBox></p>
+                        <p>Age: <asp:TextBox ID="TbPersonAge" runat="server"></asp:TextBox></p>
+                        <p>Gender: <asp:TextBox ID="TbPersonGender" runat="server"></asp:TextBox></p>
+                        <p><asp:Label ID="LblPersonError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
+                        <asp:Button ID="BtnPerson" runat="server" Text="Get Person Details" OnClick="BtnPerson_Click" CssClass="btn btn-dark"/>
+                    </div>     
+                </div>
 
-            <!-- Input Student Details -->
-            <div>
-                <h2>Input Student Details</h2>
-                <p>Name: <asp:TextBox ID="TbStudentName" runat="server"></asp:TextBox></p>
-                <p>Age: <asp:TextBox ID="TbStudentAge" runat="server"></asp:TextBox></p>
-                <p>Gender: <asp:TextBox ID="TbStudentGender" runat="server"></asp:TextBox></p>
-                <p>School: <asp:TextBox ID="TbStudentSchool" runat="server"></asp:TextBox></p>
-                <p>Math Grade: <asp:TextBox ID="TbStudentMathGrade" runat="server"></asp:TextBox></p>
-                <p>English Grade: <asp:TextBox ID="TbStudentEnglishGrade" runat="server"></asp:TextBox></p>
-                <p>Science Grade: <asp:TextBox ID="TbStudentScienceGrade" runat="server"></asp:TextBox></p>
-                <asp:Button ID="BtnStudent" runat="server" Text="Get Student Details" OnClick="BtnStudent_Click"/>
-            </div>
+                <!-- Input Student Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">INPUT STUDENT DETAILS</h3>
+                        <p>Name: <asp:TextBox ID="TbStudentName" runat="server"></asp:TextBox></p>
+                        <p>Age: <asp:TextBox ID="TbStudentAge" runat="server"></asp:TextBox></p>
+                        <p>Gender: <asp:TextBox ID="TbStudentGender" runat="server"></asp:TextBox></p>
+                        <p>School: <asp:TextBox ID="TbStudentSchool" runat="server"></asp:TextBox></p>
+                        <p>Math Grade: <asp:TextBox ID="TbStudentMathGrade" runat="server"></asp:TextBox></p>
+                        <p>English Grade: <asp:TextBox ID="TbStudentEnglishGrade" runat="server"></asp:TextBox></p>
+                        <p>Science Grade: <asp:TextBox ID="TbStudentScienceGrade" runat="server"></asp:TextBox></p>
+                        <p><asp:Label ID="LblStudentError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
+                        <asp:Button ID="BtnStudent" runat="server" Text="Get Student Details" OnClick="BtnStudent_Click" CssClass="btn btn-dark"/>
+                    </div>
+                </div>
 
-            <!-- Input Teacher Details -->
-            <div>
-                <h2>Input Teacher Details</h2>
-                <p>Name: <asp:TextBox ID="TbTeacherName" runat="server"></asp:TextBox></p>
-                <p>Age: <asp:TextBox ID="TbTeacherAge" runat="server"></asp:TextBox></p>
-                <p>Gender: <asp:TextBox ID="TbTeacherGender" runat="server"></asp:TextBox></p>
-                <p>Subject: <asp:TextBox ID="TbTeacherSubject" runat="server"></asp:TextBox></p>
-                <p>School: <asp:TextBox ID="TbTeacherSchool" runat="server"></asp:TextBox></p>
-                <p>Salary: <asp:TextBox ID="TbTeacherSalary" runat="server"></asp:TextBox></p>
-                <asp:Button ID="BtnTeacher" runat="server" Text="Get Teacher Details" OnClick="BtnTeacher_Click"/>
+                <!-- Input Teacher Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">INPUT TEACHER DETAILS</h3>
+                        <p>Name: <asp:TextBox ID="TbTeacherName" runat="server"></asp:TextBox></p>
+                        <p>Age: <asp:TextBox ID="TbTeacherAge" runat="server"></asp:TextBox></p>
+                        <p>Gender: <asp:TextBox ID="TbTeacherGender" runat="server"></asp:TextBox></p>
+                        <p>Subject: <asp:TextBox ID="TbTeacherSubject" runat="server"></asp:TextBox></p>
+                        <p>School: <asp:TextBox ID="TbTeacherSchool" runat="server"></asp:TextBox></p>
+                        <p>Salary: <asp:TextBox ID="TbTeacherSalary" runat="server"></asp:TextBox></p>
+                        <p><asp:Label ID="LblTeacherError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
+                        <asp:Button ID="BtnTeacher" runat="server" Text="Get Teacher Details" OnClick="BtnTeacher_Click" CssClass="btn btn-dark"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Input Person Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">PERSON DETAILS</h3>
+                        <p>Name: <asp:Label ID="LblPersonName" runat="server" Text=""></asp:Label></p>
+                        <p>Age: <asp:Label ID="LblPersonAge" runat="server" Text=""></asp:Label></p>
+                        <p>Gender: <asp:Label ID="LblPersonGender" runat="server" Text=""></asp:Label></p>
+                    </div>     
+                </div>
+
+                <!-- Input Student Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                    </div>
+                </div>
+
+                <!-- Input Teacher Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                    </div>  
+                </div>
             </div>
         </form>
+        
     </div> 
+
+
+
+    <!--
     <div>
         <div>
             <h2>Person Details</h2>
@@ -74,6 +115,13 @@
             <p>Net Salary: P<asp:Label ID="teacherNSalary" runat="server" Text=""></asp:Label></p>
         </div>
     </div>
-    
+    -->    
+
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>

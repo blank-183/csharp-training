@@ -42,6 +42,15 @@ namespace ExamWebApp
         protected global::System.Web.UI.WebControls.TextBox TbPersonGender;
 
         /// <summary>
+        /// LblPersonError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPersonError;
+
+        /// <summary>
         /// BtnPerson control.
         /// </summary>
         /// <remarks>
@@ -114,6 +123,15 @@ namespace ExamWebApp
         protected global::System.Web.UI.WebControls.TextBox TbStudentScienceGrade;
 
         /// <summary>
+        /// LblStudentError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblStudentError;
+
+        /// <summary>
         /// BtnStudent control.
         /// </summary>
         /// <remarks>
@@ -177,6 +195,15 @@ namespace ExamWebApp
         protected global::System.Web.UI.WebControls.TextBox TbTeacherSalary;
 
         /// <summary>
+        /// LblTeacherError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblTeacherError;
+
+        /// <summary>
         /// BtnTeacher control.
         /// </summary>
         /// <remarks>
@@ -184,6 +211,33 @@ namespace ExamWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnTeacher;
+
+        /// <summary>
+        /// LblPersonName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPersonName;
+
+        /// <summary>
+        /// LblPersonAge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPersonAge;
+
+        /// <summary>
+        /// LblPersonGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblPersonGender;
 
         /// <summary>
         /// personName control.
