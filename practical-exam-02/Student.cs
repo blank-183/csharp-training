@@ -7,12 +7,12 @@ namespace ExamWebApp
 {
     public class Student : Person
     {
-        public int MathGrade { get; set; }
-        public int EnglishGrade { get; set; }
-        public int ScienceGrade { get; set; } 
+        public double MathGrade { get; set; }
+        public double EnglishGrade { get; set; }
+        public double ScienceGrade { get; set; } 
         public string School { get; set; }
 
-        public Student(string name, int age, string gender, int mathGrade, int englishGrade, int scienceGrade, string school) : base(name, age, gender)
+        public Student(string name, int age, string gender, double mathGrade, double englishGrade, double scienceGrade, string school) : base(name, age, gender)
         {
             this.MathGrade = mathGrade;
             this.EnglishGrade = englishGrade;

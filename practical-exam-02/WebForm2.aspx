@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm.aspx.cs" Inherits="ExamWebApp.WebForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="ExamWebApp.WebForm2" %>
 
 <!DOCTYPE html>
 
@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container m-3 px-4 d-flex justify-content-center">
+        <h1 class="text-center">Hello</h1>
         <form runat="server">
             <div class="row mb-2">
                 <p><a href="#">Go to display all details</a></p>
@@ -77,13 +78,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col mx-2 card justify-content-center">
-
-                </div>
-            </div>
-
             <div class="row">
                 <!-- Display Person Details -->
                 <div class="col mx-2 card justify-content-center">
@@ -125,7 +119,8 @@
                     </div>  
                 </div>
             </div>
-        </form>      
+        </form>
+        
     </div> 
 
     <script 

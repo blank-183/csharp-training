@@ -11,7 +11,7 @@ namespace ExamWebApp
 {
 
 
-    public partial class WebForm
+    public partial class WebForm2
     {
 
         /// <summary>

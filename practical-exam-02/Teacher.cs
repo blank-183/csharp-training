@@ -9,7 +9,6 @@ namespace ExamWebApp
     {
         public string Subject { get; set; }
         public string School { get; set; }
-
         public decimal Salary { get; set; }
 
         public Teacher(string name, int age, string gender, string subject, string school, decimal salary) : base(name, age, gender)
@@ -26,7 +25,7 @@ namespace ExamWebApp
 
         public string GradeStudents()
         {
-            return "No Grades";
+            return "GRADE NOT APPLICABLE";
         }
 
         public override Dictionary<string, string> GetDetails()
@@ -37,7 +36,7 @@ namespace ExamWebApp
             dict.Add("gender", this.Gender);
             dict.Add("subject", this.Subject);
             dict.Add("school", this.School);
-            dict.Add("salary", Math.Round(this.Salary, 2).ToString("#.##"));
+            dict.Add("salary", Math.Round(this.Salary, 2).ToString("#,##0.00"));
 
             return dict;
         }
