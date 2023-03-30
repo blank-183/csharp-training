@@ -31,3 +31,9 @@ h3 {
 .red-text {
     color: red;
 }
+
+.rbutton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

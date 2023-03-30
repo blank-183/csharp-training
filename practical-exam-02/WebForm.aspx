@@ -12,9 +12,6 @@
 <body>
     <div class="container m-3 px-4 d-flex justify-content-center">
         <form runat="server">
-            <div class="row mb-2">
-                <p><a href="#">Go to display all details</a></p>
-            </div>
             <div class="row mb-3">
                 <!-- Input Person Details -->
                 <div class="col mx-2 card justify-content-center">
@@ -23,17 +20,30 @@
                         <p>Name: <asp:TextBox ID="TbPersonName" runat="server"></asp:TextBox></p>
                         <p>Age: <asp:TextBox ID="TbPersonAge" runat="server"></asp:TextBox></p>
                         <p>Select Gender: </p>
-                        <p>
+                        <div class="rbutton">
                              <asp:RadioButtonList ID="RbPersonGender" runat="server" RepeatDirection="Horizontal">
                                             <asp:ListItem>Male</asp:ListItem>
                                             <asp:ListItem>Female</asp:ListItem>
                             </asp:RadioButtonList>
-                        </p>
+                        </div>
                         <p><asp:Label ID="LblPersonError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
                         <asp:Button ID="BtnPerson" runat="server" Text="Get Person Details" OnClick="BtnPerson_Click" CssClass="btn btn-dark"/>
                     </div>     
                 </div>
 
+                <!-- Display Person Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">PERSON DETAILS</h3>
+                        <p>Name: <asp:Label ID="LblPersonName" runat="server" Text=""></asp:Label></p>
+                        <p>Age: <asp:Label ID="LblPersonAge" runat="server" Text=""></asp:Label></p>
+                        <p>Gender: <asp:Label ID="LblPersonGender" runat="server" Text=""></asp:Label></p>
+                    </div>     
+                </div>      
+
+            </div>
+
+            <div class="row mb-3">
                 <!-- Input Student Details -->
                 <div class="col mx-2 card justify-content-center">
                     <div class="card-body m-1">
@@ -41,12 +51,12 @@
                         <p>Name: <asp:TextBox ID="TbStudentName" runat="server"></asp:TextBox></p>
                         <p>Age: <asp:TextBox ID="TbStudentAge" runat="server"></asp:TextBox></p>
                         <p>Select Gender: </p>
-                        <p>
+                        <div class="rbutton">
                              <asp:RadioButtonList ID="RbStudentGender" runat="server" RepeatDirection="Horizontal">
                                             <asp:ListItem>Male</asp:ListItem>
                                             <asp:ListItem>Female</asp:ListItem>
                             </asp:RadioButtonList>
-                        </p>
+                        </div>
                         <p>School: <asp:TextBox ID="TbStudentSchool" runat="server"></asp:TextBox></p>
                         <p>Math Grade: <asp:TextBox ID="TbStudentMathGrade" runat="server"></asp:TextBox></p>
                         <p>English Grade: <asp:TextBox ID="TbStudentEnglishGrade" runat="server"></asp:TextBox></p>
@@ -56,49 +66,10 @@
                     </div>
                 </div>
 
-                <!-- Input Teacher Details -->
-                <div class="col mx-2 card justify-content-center">
-                    <div class="card-body m-1">
-                        <h3 class="text-center">INPUT TEACHER DETAILS</h3>
-                        <p>Name: <asp:TextBox ID="TbTeacherName" runat="server"></asp:TextBox></p>
-                        <p>Age: <asp:TextBox ID="TbTeacherAge" runat="server"></asp:TextBox></p>
-                        <p>Select Gender: </p>
-                        <p>
-                             <asp:RadioButtonList ID="RbTeacherGender" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem>Male</asp:ListItem>
-                                            <asp:ListItem>Female</asp:ListItem>
-                            </asp:RadioButtonList>
-                        </p>
-                        <p>Subject: <asp:TextBox ID="TbTeacherSubject" runat="server"></asp:TextBox></p>
-                        <p>School: <asp:TextBox ID="TbTeacherSchool" runat="server"></asp:TextBox></p>
-                        <p>Salary: <asp:TextBox ID="TbTeacherSalary" runat="server"></asp:TextBox></p>
-                        <p><asp:Label ID="LblTeacherError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
-                        <asp:Button ID="BtnTeacher" runat="server" Text="Get Teacher Details" OnClick="BtnTeacher_Click" CssClass="btn btn-dark"/>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col mx-2 card justify-content-center">
-
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Display Person Details -->
-                <div class="col mx-2 card justify-content-center">
-                    <div class="card-body m-1">
-                        <h3 class="text-left">PERSON DETAILS</h3>
-                        <p>Name: <asp:Label ID="LblPersonName" runat="server" Text=""></asp:Label></p>
-                        <p>Age: <asp:Label ID="LblPersonAge" runat="server" Text=""></asp:Label></p>
-                        <p>Gender: <asp:Label ID="LblPersonGender" runat="server" Text=""></asp:Label></p>
-                    </div>     
-                </div>
-
                 <!-- Display Student Details -->
                 <div class="col mx-2 card justify-content-center">
                     <div class="card-body m-1">
-                        <h3 class="text-left">STUDENT DETAILS</h3>
+                        <h3 class="text-center">STUDENT DETAILS</h3>
                         <p>Name: <asp:Label ID="LblStudentName" runat="server" Text=""></asp:Label></p>
                         <p>Age: <asp:Label ID="LblStudentAge" runat="server" Text=""></asp:Label></p>
                         <p>Gender: <asp:Label ID="LblStudentGender" runat="server" Text=""></asp:Label></p>
@@ -109,11 +80,34 @@
                         <p>GPA: <asp:Label ID="LblStudentGPA" runat="server" Text=""></asp:Label></p>
                     </div>
                 </div>
+            </div>
 
+            <div class="row mb-3">
                 <!-- Input Teacher Details -->
                 <div class="col mx-2 card justify-content-center">
                     <div class="card-body m-1">
-                        <h3 class="text-left">TEACHER DETAILS</h3>
+                        <h3 class="text-center">INPUT TEACHER DETAILS</h3>
+                        <p>Name: <asp:TextBox ID="TbTeacherName" runat="server"></asp:TextBox></p>
+                        <p>Age: <asp:TextBox ID="TbTeacherAge" runat="server"></asp:TextBox></p>
+                        <p>Select Gender: </p>
+                        <div class="rbutton">
+                             <asp:RadioButtonList ID="RbTeacherGender" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem>Male</asp:ListItem>
+                                            <asp:ListItem>Female</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </div>
+                        <p>Subject: <asp:TextBox ID="TbTeacherSubject" runat="server"></asp:TextBox></p>
+                        <p>School: <asp:TextBox ID="TbTeacherSchool" runat="server"></asp:TextBox></p>
+                        <p>Salary: <asp:TextBox ID="TbTeacherSalary" runat="server"></asp:TextBox></p>
+                        <p><asp:Label ID="LblTeacherError" runat="server" Text="" CssClass="red-text"></asp:Label></p>
+                        <asp:Button ID="BtnTeacher" runat="server" Text="Get Teacher Details" OnClick="BtnTeacher_Click" CssClass="btn btn-dark"/>
+                    </div>
+                </div>
+
+                <!-- Display Teacher Details -->
+                <div class="col mx-2 card justify-content-center">
+                    <div class="card-body m-1">
+                        <h3 class="text-center">TEACHER DETAILS</h3>
                         <p>Name: <asp:Label ID="LblTeacherName" runat="server" Text=""></asp:Label></p>
                         <p>Age: <asp:Label ID="LblTeacherAge" runat="server" Text=""></asp:Label></p>
                         <p>Gender: <asp:Label ID="LblTeacherGender" runat="server" Text=""></asp:Label></p>

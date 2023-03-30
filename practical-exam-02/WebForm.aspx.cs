@@ -7,24 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace ExamWebApp
 {
+
     public partial class WebForm : System.Web.UI.Page
     {
+        List<Person> personList = new List<Person>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Person person = new Person("Ivee", 22, "Female");
-            ////DisplayPersonDetails(person);
-
-            //Student student = new Student("Justin", 25, "Male", 75, 92, 93, "Sorsogon Pilot Elementary School");
-            ////DisplayStudentDetails(student);
-
-            //Teacher teacher = new Teacher("John", 30, "Male", "Programming Languages", "Harvard", 150000);
-            ////DisplayTeacherDetails(teacher);
-
-            //Person[] persons = new Person[] { person, student, teacher };
-
-            //DisplayPersonDetails(persons[0]);
-            //DisplayStudentDetails((Student) persons[1]);
-            //DisplayTeacherDetails((Teacher)persons[2]);
 
         }
 
@@ -56,6 +45,7 @@ namespace ExamWebApp
             DisplayPersonDetails(person);
 
             LblPersonError.Text = string.Empty;
+            personList.Add(person);
         }
 
         protected void BtnStudent_Click(object sender, EventArgs e)
@@ -64,7 +54,9 @@ namespace ExamWebApp
             string ageInput = TbStudentAge.Text;
             int genderIndex = RbStudentGender.SelectedIndex;
             string school = TbStudentSchool.Text;
-            string mathGradeInput = TbStudentMathGrade.Text, englishGradeInput = TbStudentEnglishGrade.Text, scienceGradeInput = TbStudentScienceGrade.Text;
+            string mathGradeInput = TbStudentMathGrade.Text, 
+                englishGradeInput = TbStudentEnglishGrade.Text, 
+                scienceGradeInput = TbStudentScienceGrade.Text;
             double mathGrade, englishGrade, scienceGrade;
             string invalidInput = "";
             int age;
@@ -100,6 +92,7 @@ namespace ExamWebApp
             DisplayStudentDetails(student);
 
             LblStudentError.Text = string.Empty;
+            personList.Add(student);
         }
 
         protected void BtnTeacher_Click(object sender, EventArgs e)
@@ -140,6 +133,7 @@ namespace ExamWebApp
             DisplayTeacherDetails(teacher);
 
             LblTeacherError.Text = string.Empty;
+            personList.Add(teacher);
         }
 
         private void DisplayPersonDetails(Person person)
@@ -175,5 +169,6 @@ namespace ExamWebApp
             LblTeacherGSalary.Text = dict["salary"];
             LblTeacherNSalary.Text = teacher.GetNetSalary().ToString("#,##0.00");
         }
+
     }
 }
