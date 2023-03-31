@@ -177,32 +177,7 @@ namespace ExamWebApp
             {
                 DisplayTeacherDetails((Teacher)personList[2]);
             }
-
-            /*
-            foreach(Person obj in personList)
-            {
-                if(obj == null)
-                {
-                    continue;
-                }
-
-                if(obj is Person)
-                {
-                    DisplayPersonDetails(obj);
-                }
-                else if(obj is Student)
-                {
-                    DisplayStudentDetails((Student) obj);
-                }
-                else if(obj is Teacher)
-                {
-                    DisplayTeacherDetails((Teacher) obj);
-                }
-            }
-            */
-
         }
-
 
         private void DisplayPersonDetails(Person person)
         {
