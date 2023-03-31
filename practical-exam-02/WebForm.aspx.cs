@@ -10,7 +10,7 @@ namespace ExamWebApp
 
     public partial class WebForm : System.Web.UI.Page
     {
-        List<Person> personList = new List<Person>();
+        static Person[] personList = new Person[3];
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,7 +45,7 @@ namespace ExamWebApp
             DisplayPersonDetails(person);
 
             LblPersonError.Text = string.Empty;
-            personList.Add(person);
+            personList[0] = person;
         }
 
         protected void BtnStudent_Click(object sender, EventArgs e)
@@ -92,7 +92,8 @@ namespace ExamWebApp
             DisplayStudentDetails(student);
 
             LblStudentError.Text = string.Empty;
-            personList.Add(student);
+            
+            personList[1] = student;
         }
 
         protected void BtnTeacher_Click(object sender, EventArgs e)
@@ -133,8 +134,75 @@ namespace ExamWebApp
             DisplayTeacherDetails(teacher);
 
             LblTeacherError.Text = string.Empty;
-            personList.Add(teacher);
+            
+            personList[2] = teacher;
         }
+
+        protected void BtnClearDetails_Click(object sender, EventArgs e)
+        {
+            LblPersonName.Text = string.Empty;
+            LblPersonAge.Text = string.Empty;
+            LblPersonGender.Text = string.Empty;
+            LblStudentName.Text = string.Empty;
+            LblStudentAge.Text = string.Empty;
+            LblStudentGender.Text = string.Empty;
+            LblStudentSchool.Text = string.Empty;
+            LblStudentMathGrade.Text = string.Empty;
+            LblStudentEnglishGrade.Text = string.Empty;
+            LblStudentScienceGrade.Text = string.Empty;
+            LblStudentGPA.Text = string.Empty;
+            LblTeacherName.Text = string.Empty;
+            LblTeacherAge.Text = string.Empty;
+            LblTeacherGender.Text = string.Empty;
+            LblTeacherSubject.Text = string.Empty;
+            LblTeacherSchool.Text = string.Empty;
+            LblTeacherGrade.Text = string.Empty;
+            LblTeacherGSalary.Text = string.Empty;
+            LblTeacherNSalary.Text = string.Empty;
+        }
+
+        protected void BtnAllDetails_Click(object sender, EventArgs e)
+        {
+            if (personList[0] != null)
+            {
+                DisplayPersonDetails(personList[0]);
+            }
+
+            if (personList[1] != null)
+            {
+                DisplayStudentDetails((Student)personList[1]);
+            }
+
+            if (personList[2] != null)
+            {
+                DisplayTeacherDetails((Teacher)personList[2]);
+            }
+
+            /*
+            foreach(Person obj in personList)
+            {
+                if(obj == null)
+                {
+                    continue;
+                }
+
+                if(obj is Person)
+                {
+                    DisplayPersonDetails(obj);
+                }
+                else if(obj is Student)
+                {
+                    DisplayStudentDetails((Student) obj);
+                }
+                else if(obj is Teacher)
+                {
+                    DisplayTeacherDetails((Teacher) obj);
+                }
+            }
+            */
+
+        }
+
 
         private void DisplayPersonDetails(Person person)
         {
@@ -169,6 +237,5 @@ namespace ExamWebApp
             LblTeacherGSalary.Text = dict["salary"];
             LblTeacherNSalary.Text = teacher.GetNetSalary().ToString("#,##0.00");
         }
-
     }
 }

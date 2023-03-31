@@ -12,6 +12,23 @@
 <body>
     <div class="container m-3 px-4 d-flex justify-content-center">
         <form runat="server">
+            
+            <!-- start of all details row -->
+            <div class="row mb-3">
+                <div class="justify-content-center">
+                    <div class="row m-1">
+                        <div class="col mx-2 justify-content-center">
+                            <asp:Button ID="BtnClear" runat="server" Text="Clear Details" OnClick="BtnClearDetails_Click" CssClass="btn btn-dark"/>
+                        </div>
+                        <div class="col mx-2 justify-content-center">
+                            <asp:Button ID="BtnAllDetails" runat="server" Text="Get All Details" OnClick="BtnAllDetails_Click" CssClass="btn btn-dark"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of all details row -->
+
+            <!-- start of person -->
             <div class="row mb-3">
                 <!-- Input Person Details -->
                 <div class="col mx-2 card justify-content-center">
@@ -40,9 +57,10 @@
                         <p>Gender: <asp:Label ID="LblPersonGender" runat="server" Text=""></asp:Label></p>
                     </div>     
                 </div>      
-
             </div>
+            <!-- end of person row -->
 
+            <!-- start of student row -->
             <div class="row mb-3">
                 <!-- Input Student Details -->
                 <div class="col mx-2 card justify-content-center">
@@ -81,7 +99,9 @@
                     </div>
                 </div>
             </div>
+            <!-- end of student row -->
 
+            <!-- start of teacher row -->
             <div class="row mb-3">
                 <!-- Input Teacher Details -->
                 <div class="col mx-2 card justify-content-center">
@@ -119,6 +139,10 @@
                     </div>  
                 </div>
             </div>
+            <!-- end of teacher row -->
+
+            
+
         </form>      
     </div> 
 
